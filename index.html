@@ -1,11 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devina Portofolio</title>
+    <title>Devina Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        window.onload = function() {
+            var userName = prompt("Siapakah Nama Anda?");
+            if (userName) {
+                document.getElementById("user-name").textContent = userName;
+            }
+        };
+    </script>
 </head>
+
 <body>
-    
+    <header>
+        <div class="logo">DN<br>DEVINA NANDA</div>
+        <nav>
+            <div class="menu"></div>
+            <a href="#home">HOME</a>
+            <a href="#new-collection">NEW COLLECTION</a>
+            <a href="#all-collection">ALL COLLECTION</a>
+            <a href="#bags">BAGS</a>
+            <a href="#review">REVIEW FORM</a>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <header>
+            <h2> Hi <span id="user-name"></span>, Welcome To DN Fashion</h2>
+        </header>
+        <img src="https://www.fashiontrendsetter.com/v2/wp-content/uploads/2022/08/Pontetorto-Autumn-Winter-2023-24-Collection-1.jpg" alt="Fashion Models">
+        <div class="home-text">
+            <h1>DN<br>DEVINA NANDA FASHION</h1>
+            <p>EXPLORE THE NEW COLLECTION NOW</p>
+        </div>
+    </section>
+
+    <!-- New Collection Section -->
+    <section class="new-collection" id="new-collection">
+        <h2>NEW COLLECTION</h2>
+        <div class="collection-items">
+            <div class="item">
+                <img src="https://static.e-stradivarius.net/5/photos4/2024/V/0/1/p/4804/660/702/4804660702_1_1_3.jpg?t=1706272793472.jpg" alt="Basic Jeans">
+                <p>BASIC JEANS</p>
+            </div>
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/88/8c/1f/888c1f4d1a4ff2560dc1e160efb693d4.png" alt="Oversized Blazer">
+                <p>OVERSIZED BLAZER</p>
+            </div>
+            <div class="item">
+                <img src="https://executive.co.id/cdn/shop/products/5-VEWKSG124B035_NAVY_1_T.jpg?v=1708075730" alt="Cropped Vest">
+                <p>CROPPED VEST</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Collection Section -->
+    <section class="category" id="all-collection">
+        <h2>ALL COLLECTION</h2>
+        <div class="category-items">
+            <div class="item">
+                <img src="https://executive.co.id/cdn/shop/files/5-BLWKSG124C027_OFF_WHITE_1_T_07f80369-f32f-4536-b355-12de5f1735a2.jpg?v=1714116349.jpg" alt="White Blouse">
+                <p>WHITE BLOUSE</p>
+            </div>
+            <div class="item">
+                <img src="https://colorbox.co.id/cdn/shop/files/I-TSKKEY124D052_LT._PINK_1_T_7f2ad0ea-a93b-45e3-a48e-34544bfe12f8.jpg?v=1711529647.jpg" alt="Crop Tops">
+                <p>CROP TOPS</p>
+            </div>
+            <div class="item">
+                <img src="https://colorbox.co.id/cdn/shop/products/I-SIKFCT124C007_MINT_4_T.jpg?v=1709542281.jpg" alt="One Set">
+                <p>ONE SET</p>
+            </div>
+            <div class="item">
+                <img src="https://executive.co.id/cdn/shop/products/5-DDWFEM223L082_LT._PINK_1_T.jpg?v=1705561797" alt="Pink Dress">
+                <p>PINK DRESS</p>
+            </div>
+            <div class="item">
+                <img src="https://colorbox.co.id/cdn/shop/products/I-SIKFCR223I013_PURPLE_4_T.jpg?v=1693294715.jpg" alt="Mini Skirt">
+                <p>MINI SKIRT</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bags Section -->
+    <section class="new-collection" id="bags">
+        <h2>BAGS</h2>
+        <div class="collection-items">
+            <div class="item">
+                <img src="https://media1.popsugar-assets.com/files/thumbor/-ENhtV_Hy_3F-CqEwrQlRQjrBUI/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2020/03/11/779/n/1922564/a8d43d75bc8cad3d_netimgSSWkfL/i/HM-Rattan-Shoulder-Bag.jpg" alt="Rattan Shoulder Bag">
+                <p>RATTAN SHOULDER BAG</p>
+            </div>
+            <div class="item">
+                <img src="https://d29c1z66frfv6c.cloudfront.net/pub/media/catalog/product/large/d9066619db984b2cc0613f63ea6a5b0f9786cdd7_xxl-1.jpg" alt="Grey Shopper Bag">
+                <p>GREY SHOPPER BAG</p>
+            </div>
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/d1/91/8b/d1918ba31e6ced43b1420fe92d1b1001.jpg" alt="Canvas Bag">
+                <p>CANVAS BAG</p>
+            </div>
+            <div class="item">
+                <img src="https://i.pinimg.com/originals/ed/b9/b2/edb9b254f36bceaf66effe597249b12e.jpg" alt="Black Tote Bag">
+                <p>BLACK TOTE BAG</p>
+            </div>
+            <div class="item">
+                <img src="https://media1.popsugar-assets.com/files/thumbor/t8f3fU9ri6reblH-SGQBw1LBtLw/fit-in/1024x1024/filters:format_auto-!!-:strip_icc-!!-/2021/01/15/029/n/1922564/47855c54285c14c4_netimgm2FoIc/i/HM-Shoulder-Bag.jpg" alt="Grey Shoulder Bag">
+                <p>GREY SHOULDER BAG</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Review Section -->
+    <section class="review" id="review">
+        <div class="container">
+            <form id="reviewForm">
+                <h2>REVIEW FORM</h2>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div class="form-group">
+                    <label>What do you think of the overall aesthetic of our new collection:</label>
+                    <div>
+                        <input type="radio" id="like-it" name="collection" value="like-it" required>
+                        <label for="like-it">Like it</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="dislike-it" name="collection" value="dislike-it" required>
+                        <label for="dislike-it">Dislike it</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="review"> Review :</label>
+                    <textarea id="review" name="review" rows="4" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="result"></div>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
