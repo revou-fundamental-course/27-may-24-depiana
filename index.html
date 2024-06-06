@@ -7,12 +7,50 @@
     <title>Devina Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <script>
-        window.onload = function() {
+        window.onload = function () {
             var userName = prompt("Siapakah Nama Anda?");
             if (userName) {
                 document.getElementById("user-name").textContent = userName;
             }
+
+            document.getElementById("reviewForm").onsubmit = function (event) {
+                event.preventDefault();
+
+                // Get form values
+                var name = document.getElementById("name").value;
+                var dob = document.getElementById("dob").value;
+                var collection = document.querySelector('input[name="collection"]:checked').value;
+                var review = document.getElementById("review").value;
+// Get form values
+var name = document.getElementById("name").value;
+        var dob = document.getElementById("dob").value;
+        var collection = document.querySelector('input[name="collection"]:checked').value;
+
+        // Get current time in Indonesia (WIB)
+        var now = new Date();
+        var options = {
+            timeZone: 'Asia/Jakarta',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+            hour12: false
         };
+        var indonesiaTime = new Intl.DateTimeFormat('en-GB', options).format(now);
+
+        // Display the review result
+        var resultDiv = document.getElementById("result");
+        resultDiv.innerHTML = `
+            <h2>Review Submitted</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Date of Birth:</strong> ${dob}</p>
+            <p><strong>Collection Feedback:</strong> ${collection === 'like-it' ? 'Like it' : 'Dislike it'}</p>
+            <p><strong>Submitted at:</strong> ${indonesiaTime}</p>
+        `;
+    };
+};
     </script>
 </head>
 
@@ -32,7 +70,7 @@
     <!-- Home Section -->
     <section class="home" id="home">
         <header>
-            <h2> Hi <span id="user-name"></span>, Welcome To DN Fashion</h2>
+            <h2>Hi <span id="user-name"></span>, Welcome To DN Fashion</h2>
         </header>
         <img src="https://www.fashiontrendsetter.com/v2/wp-content/uploads/2022/08/Pontetorto-Autumn-Winter-2023-24-Collection-1.jpg" alt="Fashion Models">
         <div class="home-text">
@@ -128,19 +166,9 @@
                     <input type="date" id="dob" name="dob" required>
                 </div>
                 <div class="form-group">
-                    <label>What do you think of the overall aesthetic of our new collection:</label>
-                    <div>
-                        <input type="radio" id="like-it" name="collection" value="like-it" required>
-                        <label for="like-it">Like it</label>
-                    </div>
-                    <div>
-                        <input type="radio" id="dislike-it" name="collection" value="dislike-it" required>
-                        <label for="dislike-it">Dislike it</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="review"> Review :</label>
-                    <textarea id="review" name="review" rows="4" required></textarea>
+                    <label for="collection">Do you like the new collection?</label>
+                    <label><input type="radio" name="collection" value="like-it" required> Like it</label>
+                    <label><input type="radio" name="collection" value="dislike-it"> Dislike it</label>
                 </div>
                 <button type="submit">Submit</button>
             </form>
@@ -150,4 +178,5 @@
 
     <script src="scripts.js"></script>
 </body>
+
 </html>
